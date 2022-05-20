@@ -26,15 +26,15 @@ jobs:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
       - name: Install dependencies
-        working-directory: ./Ministerio de Turismo
+        working-directory: ./Obligatorio/Ministerio de Turismo
         run: dotnet restore
 
       - name: Build
-        working-directory: ./Ministerio de Turismo
+        working-directory: ./Obligatorio/Ministerio de Turismo
         run: dotnet build --configuration Release --no-restore
 
       - name: Test
-        working-directory: ./Ministerio de Turismo
+        working-directory: ./Obligatorio/Ministerio de Turismo
         run: dotnet test --no-restore --verbosity normal
 
       - name: Codecov
