@@ -35,7 +35,7 @@ namespace MinTur.DataAccess.Repositories
 
         public int StoreAdministrator(Administrator administrator)
         {
-            if (EmailAlreadyExists(administrator.Email))
+            if (EmailAlreadyExists(administrator))
                 throw new InvalidOperationException("Administrator with same email already registered");
 
             StoreAdministratorInDb(administrator);
@@ -46,7 +46,7 @@ namespace MinTur.DataAccess.Repositories
         {
             if (!AdministratorExists(newAdministrator.Id))
                 throw new ResourceNotFoundException("Could not find specified administrator");
-            if (EmailAlreadyExists(newAdministrator.Email))
+            if (EmailAlreadyExists(newAdministrator))
                 throw new InvalidOperationException("Administrator with same email already registered");
 
             Administrator retrievedAdministrator = Context.Set<Administrator>().Where(a => a.Id == newAdministrator.Id).FirstOrDefault();
@@ -56,7 +56,7 @@ namespace MinTur.DataAccess.Repositories
 
         public Administrator GetAdministratorById(int administratorId)
         {
-            if(!AdministratorExists(administratorId))
+            if (!AdministratorExists(administratorId))
                 throw new ResourceNotFoundException("Could not find specified administrator");
 
             return Context.Set<Administrator>().AsNoTracking().Where(a => a.Id == administratorId).FirstOrDefault();
@@ -71,9 +71,9 @@ namespace MinTur.DataAccess.Repositories
             return retrievedAdministrator != null;
         }
 
-        private bool EmailAlreadyExists(string email)
+        private bool EmailAlreadyExists(Administrator administrator)
         {
-            Administrator retrievedAdministrator = Context.Set<Administrator>().AsNoTracking().Where(a => a.Email == email)
+            Administrator retrievedAdministrator = Context.Set<Administrator>().AsNoTracking().Where(admin => admin.Email == administrator.Email && admin.Id != administrator.Id)
                 .FirstOrDefault();
 
             return retrievedAdministrator != null;
@@ -84,7 +84,7 @@ namespace MinTur.DataAccess.Repositories
             return Context.Set<Administrator>().AsNoTracking().ToList().Count;
         }
 
-        private void RemoveAdministratorFromDb(Administrator administrator) 
+        private void RemoveAdministratorFromDb(Administrator administrator)
         {
             Context.Remove(administrator);
             Context.SaveChanges();
@@ -96,7 +96,7 @@ namespace MinTur.DataAccess.Repositories
             Context.SaveChanges();
             Context.Entry(administrator).State = EntityState.Detached;
         }
-        
+
         private void UpdateAdministratorInDb(Administrator administrator)
         {
             Context.Entry(administrator).State = EntityState.Modified;
