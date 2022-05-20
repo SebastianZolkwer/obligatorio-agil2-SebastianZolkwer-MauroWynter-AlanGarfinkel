@@ -20,6 +20,7 @@ namespace MinTur.DataAccess.Facades
         private AuthenticationTokenRepository _authenticationTokenRepository;
         private AdministratorRepository _administratorRepository;
         private ReviewRepository _reviewRepository;
+        private ChargingPointRepository _chargingPointRepository;
 
         public RepositoryFacade(DbContext context)
         {
@@ -31,6 +32,7 @@ namespace MinTur.DataAccess.Facades
             _reservationRepository = new ReservationRepository(_context);
             _authenticationTokenRepository = new AuthenticationTokenRepository(_context);
             _administratorRepository = new AdministratorRepository(_context);
+            _chargingPointRepository = new ChargingPointRepository(_context);
             _reviewRepository = new ReviewRepository(_context);
         }
 
@@ -156,6 +158,11 @@ namespace MinTur.DataAccess.Facades
         public Review GetReviewById(int reviewId)
         {
             return _reviewRepository.GetReviewById(reviewId);
+        }
+
+        public ChargingPoint CreateChargingPoint(ChargingPoint chargingPoint)
+        {
+            return _chargingPointRepository.CreateChargingPoint(chargingPoint);
         }
     }
 }
