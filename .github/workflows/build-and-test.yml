@@ -37,5 +37,10 @@ jobs:
         working-directory: ./Obligatorio/Ministerio de Turismo
         run: dotnet test --no-build --verbosity normal --filter FullyQualifiedName\!~SpecChargingPoint.Features
 
-      - name: Codecov
-        uses: codecov/codecov-action@v1.5.2
+      - name: Get a report
+        uses: dorny/test-reporter@v1
+        with:
+          name: DotNET Tests Results
+          path: '**/*.trx'
+          reporter: dotnet-trx
+          fail-on-error: 'false'
