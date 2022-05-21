@@ -28,7 +28,7 @@ namespace MinTur.WebApi.Controllers
         {
             ChargingPoint chargingPoint = _chargingPointManager.Create(chargingPointIntentModel.ToEntity());
             ChargingPointDetailModel created = new ChargingPointDetailModel(chargingPoint);
-            return Ok(created);
+            return Created("api/chargingPoints/" + created.Id, created);
         }
     }
 }

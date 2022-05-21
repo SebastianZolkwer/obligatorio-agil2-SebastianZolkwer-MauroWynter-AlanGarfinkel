@@ -56,7 +56,7 @@ namespace MinTur.Domain.BusinessEntities
         }
         private void ValidateIdentifier()
         {
-            if (String.IsNullOrEmpty(this.Identifier) || (!Regex.IsMatch(this.Identifier, @"^\d+$") && this.Identifier.Length != 4))
+            if (String.IsNullOrEmpty(this.Identifier) || !Regex.IsMatch(this.Identifier, @"^\d+$") || this.Identifier.Length != 4)
                 throw new InvalidRequestDataException("Must provide a identifier of 4 digits");
         }
 

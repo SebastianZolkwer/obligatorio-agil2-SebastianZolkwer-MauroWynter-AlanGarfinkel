@@ -6,6 +6,8 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
+using TechTalk.SpecFlow.Assist.ValueRetrievers;
 
 namespace SpecChargingPoint.Steps
 {
@@ -17,6 +19,12 @@ namespace SpecChargingPoint.Steps
 
 
         private readonly ScenarioContext _scenarioContext;
+
+        [BeforeTestRun]
+        public static void BeforeTestRun()
+        {
+            Service.Instance.ValueRetrievers.Register(new NullValueRetriever("<null>"));
+        }
 
 
         public ChargingPointStepDefinitions(ScenarioContext scenarioContext)
