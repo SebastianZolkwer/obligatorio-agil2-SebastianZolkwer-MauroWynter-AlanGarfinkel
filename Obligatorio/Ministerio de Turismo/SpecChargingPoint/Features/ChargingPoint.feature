@@ -25,8 +25,7 @@ Scenario: Create Charging Point with wrong name
 	Then the result code should be 400
 
 Scenario: Create Charging Point with null name
-	Given the name is null
-	And the description is Servicio barato
+	Given the description is Servicio barato
 	And the address is Rambla gandhi 133
 	And the identifier is 4785
 	And the regionId is 2
@@ -44,7 +43,6 @@ Scenario: Create Charging Point with wrong description
 
 Scenario: Create Charging Point with nil description
 	Given the name is punto de carga
-	And the description is <null>
 	And the address is Rambla gandhi 133
 	And the identifier is 4785
 	And the regionId is 2
@@ -63,7 +61,6 @@ Scenario: Create Charging Point with wrong address
 Scenario: Create Charging Point with nil address
 	Given the name is punto de carga
 	And the description is Muy bueno
-	And the address is <null>
 	And the identifier is 4785
 	And the regionId is 2
 	When the administrator press the button Crear

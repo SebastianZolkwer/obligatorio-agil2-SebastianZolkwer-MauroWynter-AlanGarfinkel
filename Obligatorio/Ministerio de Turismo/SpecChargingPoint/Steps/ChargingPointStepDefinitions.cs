@@ -20,12 +20,6 @@ namespace SpecChargingPoint.Steps
 
         private readonly ScenarioContext _scenarioContext;
 
-        [BeforeTestRun]
-        public static void BeforeTestRun()
-        {
-            Service.Instance.ValueRetrievers.Register(new NullValueRetriever("<null>"));
-        }
-
 
         public ChargingPointStepDefinitions(ScenarioContext scenarioContext)
         {
