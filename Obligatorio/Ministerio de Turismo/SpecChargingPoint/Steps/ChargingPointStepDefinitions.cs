@@ -52,13 +52,13 @@ namespace SpecChargingPoint.Steps
         [Given("the identifier is (.*)")]
         public void GivenIdentifierIs(string identifier)
         {
-            chargingPointIntentModel.Indetifier = identifier;
+            chargingPointIntentModel.Identifier = identifier;
         }
 
         [When("the administrator press the button Crear")]
         public async Task WhenTheAdministratorPressCreate()
         {
-            var requestBody = JsonConvert.SerializeObject(new { Name = chargingPointIntentModel.Name, Address = chargingPointIntentModel.Address, Description = chargingPointIntentModel.Description, Identifier = chargingPointIntentModel.Indetifier, RegionId = chargingPointIntentModel.RegionId });
+            var requestBody = JsonConvert.SerializeObject(new { Name = chargingPointIntentModel.Name, Address = chargingPointIntentModel.Address, Description = chargingPointIntentModel.Description, Identifier = chargingPointIntentModel.Identifier, RegionId = chargingPointIntentModel.RegionId });
             var request = new HttpRequestMessage(HttpMethod.Post, $"http://localhost:5000/api/chargingPoints")
             {
                 Content = new StringContent(requestBody)

@@ -19,7 +19,7 @@ namespace MinTur.Domain.BusinessEntities
         [Required]
         public string Description { get; set; }
         [Required]
-        public string Indetifier { get; set; }
+        public string Identifier { get; set; }
 
         public void Validate()
         {
@@ -40,8 +40,8 @@ namespace MinTur.Domain.BusinessEntities
 
         private void ValidateDescription()
         {
-            if (String.IsNullOrEmpty(this.Description) || this.Description.Length > 30)
-                throw new InvalidRequestDataException("Must provide a description shorter than 30 letters");
+            if (String.IsNullOrEmpty(this.Description) || this.Description.Length > 60)
+                throw new InvalidRequestDataException("Must provide a description shorter than 60 letters");
         }
 
         private void ValidateName()
@@ -51,13 +51,13 @@ namespace MinTur.Domain.BusinessEntities
         }
         private void ValidateAddress()
         {
-            if (String.IsNullOrEmpty(this.Address) || this.Address.Length > 60)
-                throw new InvalidRequestDataException("Must provide a description shorter than 30 letters");
+            if (String.IsNullOrEmpty(this.Address) || this.Address.Length > 30)
+                throw new InvalidRequestDataException("Must provide a address shorter than 30 letters");
         }
         private void ValidateIdentifier()
         {
-            if (!Regex.IsMatch(this.Indetifier, @"^\d+$") && this.Indetifier.Length != 4)
-                throw new InvalidRequestDataException("Must provide a description shorter than 60 letters");
+            if (String.IsNullOrEmpty(this.Identifier) || (!Regex.IsMatch(this.Identifier, @"^\d+$") && this.Identifier.Length != 4))
+                throw new InvalidRequestDataException("Must provide a identifier of 4 digits");
         }
 
     }

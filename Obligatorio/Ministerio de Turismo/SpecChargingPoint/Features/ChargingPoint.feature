@@ -69,7 +69,7 @@ Scenario: Create Charging Point with nil address
 	When the administrator press the button Crear
 	Then the result code should be 400
 
-Scenario: Create Charging Point with wrong identifier
+Scenario: Create Charging Point with identifier with letters
 	Given the name is "punto de carga"
 	And the description is "Muy buen"
 	And the address is "Rambla gandhi"
@@ -78,7 +78,7 @@ Scenario: Create Charging Point with wrong identifier
 	When the administrator press the button Crear
 	Then the result code should be 400
 
-Scenario: Create Charging Point with wrong identifier
+Scenario: Create Charging Point with identifier shorter
 	Given the name is "punto de carga"
 	And the description is "Muy buen"
 	And the address is "Rambla gandhi"
