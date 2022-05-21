@@ -21,9 +21,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
+        uses: actions/setup-dotnet@v2
         with:
-          dotnet-version: ${{ env.DOTNET_VERSION }}
+          dotnet-version: 3.1.x
 
       - name: Install dependencies
         working-directory: ./Obligatorio/Ministerio de Turismo
@@ -31,11 +31,11 @@ jobs:
 
       - name: Build
         working-directory: ./Obligatorio/Ministerio de Turismo
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build --no-restore
 
       - name: Test
         working-directory: ./Obligatorio/Ministerio de Turismo
-        run: dotnet test --no-restore --verbosity normal
+        run: dotnet test --no-build --verbosity normal
 
       - name: Codecov
         uses: codecov/codecov-action@v1.5.2
