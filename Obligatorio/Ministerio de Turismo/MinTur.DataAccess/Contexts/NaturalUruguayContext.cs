@@ -22,6 +22,7 @@ namespace MinTur.DataAccess.Contexts
         public DbSet<AuthorizationToken> AuthorizationTokens { get; set; }
         public DbSet<GuestGroup> GuestGroups { get; set; }
         public DbSet<Review> Reviews { get; set; }
+        public DbSet<ChargingPoint> ChargingPoints { get; set; }
 
         public NaturalUruguayContext(DbContextOptions options) : base(options) { }
 

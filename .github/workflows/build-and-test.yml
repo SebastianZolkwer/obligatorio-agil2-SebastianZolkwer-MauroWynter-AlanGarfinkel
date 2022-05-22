@@ -35,7 +35,4 @@ jobs:
 
       - name: Test
         working-directory: ./Obligatorio/Ministerio de Turismo
-        run: dotnet test --no-build --verbosity normal
-
-      - name: Codecov
-        uses: codecov/codecov-action@v1.5.2
+        run: dotnet test --no-build --verbosity normal --filter FullyQualifiedName\!~SpecChargingPoint.Features

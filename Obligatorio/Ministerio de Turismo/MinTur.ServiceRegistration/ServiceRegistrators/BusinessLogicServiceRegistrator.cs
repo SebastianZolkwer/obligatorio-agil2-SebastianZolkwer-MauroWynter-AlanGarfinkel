@@ -27,6 +27,7 @@ namespace MinTur.ServiceRegistration.ServiceRegistrators
             serviceCollection.AddScoped<IResortPricingCalculator, ResortPricingCalculator>();
             serviceCollection.AddScoped<IAuthenticationManager, AuthenticationManager>();
             serviceCollection.AddScoped<IImporterManager, ImporterManager>();
+            serviceCollection.AddScoped<IChargingPointManager, ChargingPointManager>();
         }
     }
 }
