@@ -36,3 +36,18 @@ jobs:
       - name: Test
         working-directory: ./Obligatorio/Ministerio de Turismo
         run: dotnet test --no-build --verbosity normal --filter FullyQualifiedName\!~SpecChargingPoint.Features
+
+
+      - name: Get a report
+        uses: dorny/test-reporter@v1
+        with:
+          name: DotNET Tests Results
+          path: '**/*.trx'
+          reporter: dotnet-trx
+          fail-on-error: 'false'
+        
+      - name: Upload tests results artifact
+        uses: actions/upload-artifact@v2.2.2
+        with:
+          name: GitHubActionsTestsResults
+          path: '**/*.trx'
