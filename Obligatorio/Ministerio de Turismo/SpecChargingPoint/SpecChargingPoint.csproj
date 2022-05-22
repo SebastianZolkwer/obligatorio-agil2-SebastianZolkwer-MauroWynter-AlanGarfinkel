@@ -23,4 +23,17 @@
     <ProjectReference Include="..\MinTur.WebApi\MinTur.WebApi.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Features\DeleteChargingPoint.feature.cs">
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowFeatureFiles Update="Features\DeleteChargingPoint.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DeleteChargingPoint.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
+  </ItemGroup>
+
 </Project>

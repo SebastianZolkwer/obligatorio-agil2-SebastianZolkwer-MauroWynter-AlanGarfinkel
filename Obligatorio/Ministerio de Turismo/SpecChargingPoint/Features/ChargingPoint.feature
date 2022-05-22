@@ -12,7 +12,7 @@ Scenario: Create Charging Point with correct fields
 	And the address is Rambla gandhi 133
 	And the identifier is 4785
 	And the regionId is 2
-	When the administrator press the button Crear
+	When the user press the button Crear
 	Then the result code should be 201
 
 Scenario: Create Charging Point with wrong name
@@ -21,7 +21,7 @@ Scenario: Create Charging Point with wrong name
 	And the address is Rambla gandhi 133
 	And the identifier is 4785
 	And the regionId is 2
-	When the administrator press the button Crear
+	When the user press the button Crear
 	Then the result code should be 400
 
 Scenario: Create Charging Point with null name
@@ -29,7 +29,7 @@ Scenario: Create Charging Point with null name
 	And the address is Rambla gandhi 133
 	And the identifier is 4785
 	And the regionId is 2
-	When the administrator press the button Crear
+	When the user press the button Crear
 	Then the result code should be 400
 
 Scenario: Create Charging Point with wrong description
@@ -38,7 +38,7 @@ Scenario: Create Charging Point with wrong description
 	And the address is Rambla gandhi 133
 	And the identifier is 4785
 	And the regionId is 2
-	When the administrator press the button Crear
+	When the user press the button Crear
 	Then the result code should be 400
 
 Scenario: Create Charging Point with nil description
@@ -46,7 +46,7 @@ Scenario: Create Charging Point with nil description
 	And the address is Rambla gandhi 133
 	And the identifier is 4785
 	And the regionId is 2
-	When the administrator press the button Crear
+	When the user press the button Crear
 	Then the result code should be 400
 
 Scenario: Create Charging Point with wrong address
@@ -55,7 +55,7 @@ Scenario: Create Charging Point with wrong address
 	And the address is Rambla gandhi 156 esquina TABARE Y luis alberto de herrera
 	And the identifier is 4785
 	And the regionId is 2
-	When the administrator press the button Crear
+	When the user press the button Crear
 	Then the result code should be 400
 
 Scenario: Create Charging Point with nil address
@@ -63,7 +63,7 @@ Scenario: Create Charging Point with nil address
 	And the description is Muy bueno
 	And the identifier is 4785
 	And the regionId is 2
-	When the administrator press the button Crear
+	When the user press the button Crear
 	Then the result code should be 400
 
 Scenario: Create Charging Point with identifier with letters
@@ -72,7 +72,7 @@ Scenario: Create Charging Point with identifier with letters
 	And the address is Rambla gandhi
 	And the identifier is aa
 	And the regionId is 2
-	When the administrator press the button Crear
+	When the user press the button Crear
 	Then the result code should be 400
 
 Scenario: Create Charging Point with identifier shorter
@@ -81,7 +81,7 @@ Scenario: Create Charging Point with identifier shorter
 	And the address is Rambla gandhi
 	And the identifier is 234
 	And the regionId is 2
-	When the administrator press the button Crear
+	When the user press the button Crear
 	Then the result code should be 400
 
 Scenario: Create Charging Point with not existent region id
@@ -90,5 +90,5 @@ Scenario: Create Charging Point with not existent region id
 	And the address is Rambla gandhi
 	And the identifier is 4444
 	And the regionId is 0
-	When the administrator press the button Crear
+	When the user press the button Crear
 	Then the result code should be 400
