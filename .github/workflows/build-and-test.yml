@@ -35,7 +35,7 @@ jobs:
 
       - name: Test
         working-directory: ./Obligatorio/Ministerio de Turismo
-        run: dotnet test --no-build --verbosity normal --filter FullyQualifiedName\!~SpecChargingPoint.Features
+        run: dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage" --filter FullyQualifiedName\!~SpecChargingPoint.Features
 
 
       - name: Upload coverage to Codecov
