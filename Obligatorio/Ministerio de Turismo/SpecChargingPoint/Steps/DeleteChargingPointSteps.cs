@@ -33,20 +33,7 @@ namespace SpecChargingPoint.Steps
         [When(@"the user presses the button Eliminar")]
         public async Task WhenTheUserPressesTheButtonEliminar()
         {
-            /*var requestBody = JsonConvert.SerializeObject(new { Name = "Tesla Supercharger", Address = "Cartel de Montevideo", Description = "Primer supercharger de Uruguay", Identifier = "1234", RegionId = 1, id = _id }); ;
-            var create_request = new HttpRequestMessage(HttpMethod.Post, $"http://localhost:5000/api/chargingPoints")
-            {
-                Content = new StringContent(requestBody)
-                {
-                    Headers =
-                    {
-                        ContentType = new MediaTypeHeaderValue("application/json")
-                    }
-                }
-            };*/
             var client = new HttpClient();
-            //var create_response = await client.SendAsync(create_request).ConfigureAwait(false);
-
             var delete_request = new HttpRequestMessage(HttpMethod.Delete, $"http://localhost:5000/api/chargingPoints/" + _id.ToString()){};
             var delete_response = await client.SendAsync(delete_request).ConfigureAwait(false);
             try
@@ -55,7 +42,6 @@ namespace SpecChargingPoint.Steps
             }
             catch
             {
-
             }
         }
         
