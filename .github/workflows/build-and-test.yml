@@ -1,0 +1,44 @@
+name: build and test
+
+on:
+  push:
+  pull_request:
+    paths:
+      - "**.cs"
+      - "**.csproj"
+
+env:
+  DOTNET_VERSION: "5.0.301" # The .NET SDK version to use
+
+jobs:
+  build-and-test:
+    name: build-and-test-${{matrix.os}}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: 3.1.x
+
+      - name: Install dependencies
+        working-directory: ./Obligatorio/Ministerio de Turismo
+        run: dotnet restore
+
+      - name: Build
+        working-directory: ./Obligatorio/Ministerio de Turismo
+        run: dotnet build --no-restore
+
+      - name: Test
+        working-directory: ./Obligatorio/Ministerio de Turismo
+        run: dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage" --filter FullyQualifiedName\!~SpecChargingPoint.Features
+
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+           token: ${{ secrets.YOUR_SECRET_TOKEN }}

@@ -99,7 +99,7 @@ namespace MinTur.DataAccess.Test.Repositories
         }
 
         [TestMethod]
-        public void GetAdministratorByIdReturnsAsExpected() 
+        public void GetAdministratorByIdReturnsAsExpected()
         {
             int administratorId = 2;
             Administrator administrator = CreateAdministratorWithSpecificId(administratorId);
@@ -125,7 +125,10 @@ namespace MinTur.DataAccess.Test.Repositories
             Administrator administrator = CreateAdministratorWithSpecificId(administratorId);
             InsertAdministratorIntoDb(administrator);
 
-            _repository.StoreAdministrator(administrator);
+            int administratorId2 = 8;
+            Administrator administrator2 = CreateAdministratorWithSpecificId(administratorId2);
+
+            _repository.StoreAdministrator(administrator2);
         }
 
         [TestMethod]
@@ -156,15 +159,37 @@ namespace MinTur.DataAccess.Test.Repositories
             int administratorId = 7;
             Administrator administrator = CreateAdministratorWithSpecificId(administratorId);
             InsertAdministratorIntoDb(administrator);
+            int administratorId2 = 8;
+            Administrator administrator2 = CreateAdministratorWithSpecificId(administratorId2);
+            InsertAdministratorIntoDb(administrator2);
 
             Administrator newAdministrator = new Administrator()
             {
-                Id = administratorId,
+                Id = 7,
+                Email = administrator2.Email,
+                Password = "Password2"
+            };
+
+            _repository.UpdateAdministrator(newAdministrator);
+        }
+
+        [TestMethod]
+        public void UpdateAdministratorOnlyPassword()
+        {
+            int administratorId = 7;
+            Administrator administrator = CreateAdministratorWithSpecificId(administratorId);
+            InsertAdministratorIntoDb(administrator);
+
+            Administrator newAdministrator = new Administrator()
+            {
+                Id = 7,
                 Email = administrator.Email,
                 Password = "Password2"
             };
 
             _repository.UpdateAdministrator(newAdministrator);
+            Administrator retrievedAdministrator = _context.Administrators.AsNoTracking().Where(a => a.Id == administratorId).FirstOrDefault();
+            Assert.AreEqual(retrievedAdministrator.Password, newAdministrator.Password);
         }
 
         [TestMethod]
@@ -212,6 +237,15 @@ namespace MinTur.DataAccess.Test.Repositories
             {
                 Id = administratorId,
                 Email = "admin@gmail.com",
+                Password = "password"
+            };
+        }
+        private Administrator CreateAdministratorWithSpecificId2(int administratorId)
+        {
+            return new Administrator()
+            {
+                Id = administratorId,
+                Email = "admin2@gmail.com",
                 Password = "password"
             };
         }
