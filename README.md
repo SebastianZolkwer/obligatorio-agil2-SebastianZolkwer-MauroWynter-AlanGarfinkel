@@ -34,5 +34,32 @@ Se ubican dentro de la carpeta Entrega1
     </ul>
   </ul>
 
+### Entrega 2
+#### Ubicacion de archivos
+Se ubican dentro de la carpeta Entrega2
+<ul>
+  <li>Guia de desarrollo_mantenimiento del tablero.pdf : Guia de desarrollo_mantenimiento del tablero.pdf</li>
+  <li>Configuración_mantenimiento del pipeline y su vínculo con el tablero:  Configuración_mantenimiento del pipeline y su vínculo con el tablero.pdf</li>
+  <li> User stories: User stories.pdf</li>
+  <li>Reporte de horas:Reporte Horas Segunda Entrega.pdf</li>
+  <li>Reviews: 
+    <ul>
+      <li> User story crear punto de carga: https://youtu.be/xap3F2rismU</li>
+      <li> User story eliminar punto de carga: https://youtu.be/8Oa-1TVAASA</li>
+      <li> Bug cambiar contrasena: https://youtu.be/CyTwdmuRV_I</li>
+      <li> Bug fecha al realizar reserva: https://youtu.be/KLmCcq0hAWc</li>
+    </ul>
+  </ul>
+  </li>
+  <li>Retrospective: 
+    <ul>
+      <li> Documento: Retrospective Segunda Entrega.pdf</li>
+      <li> Video: https://youtu.be/YS7CEOdRlG8</li>
+    </ul> 
+  </li>
+  <li> Informe de avance: Informe de avance - Segunda Entrega.pdf</li>
+</ul>
+  
+
 
 
