@@ -80,7 +80,7 @@ const routes: Routes = [
     ImportingModule,
     ResortListModule,
     ResortCreateModule,
-    RouterModule.forRoot(routes)],
+    RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
