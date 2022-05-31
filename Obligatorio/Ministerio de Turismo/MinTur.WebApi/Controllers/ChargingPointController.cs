@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Linq;
 using MinTur.WebApi.Filters;
 using MinTur.BusinessLogicInterface.Pricing;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MinTur.WebApi.Controllers
 {
@@ -21,6 +23,16 @@ namespace MinTur.WebApi.Controllers
         public ChargingPointController(IChargingPointManager chargingPointManager)
         {
             _chargingPointManager = chargingPointManager;
+        }
+
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            List<ChargingPoint> chargingPoints = _chargingPointManager.GetAll();
+            List<ChargingPointDetailModel> chargingPointModels = chargingPoints.Select(
+                chargingPoint => new ChargingPointDetailModel(chargingPoint)).ToList();
+
+            return Ok(chargingPointModels);
         }
 
         [HttpPost]

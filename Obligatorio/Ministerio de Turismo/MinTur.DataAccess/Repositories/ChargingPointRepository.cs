@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using MinTur.DataAccessInterface.Repositories;
 using MinTur.Domain.BusinessEntities;
 using MinTur.Exceptions;
+using System.Collections.Generic;
 
 namespace MinTur.DataAccess.Repositories
 {
@@ -55,6 +56,11 @@ namespace MinTur.DataAccess.Repositories
             Context.Set<ChargingPoint>().Remove(chargingPointToBeDeleted);
             Context.SaveChanges();
             Context.Entry(chargingPointToBeDeleted.Region).State = EntityState.Detached;
+        }
+
+        public List<ChargingPoint> GetAllChargingPoints()
+        {
+            return Context.Set<ChargingPoint>().ToList();
         }
     }
 }
