@@ -18,6 +18,11 @@ export enum ResortRoutes {
   UPDATE_AVAILABILITY = 'admin/update-resort-availability'
 }
 
+export enum ChargingPointRoutes {
+  CHARGING_POINT_LIST = 'admin/chargingPoint',
+  CHARGING_POINT_CREATE = 'admin/chargingPoint-create',
+}
+
 export enum ReviewRoutes {
   REVIEW = 'submitReview'
 }
@@ -37,6 +42,6 @@ export enum AdminSpecificRoutes {
   ADMIN_CREATE = 'admin/administrator-create'
 }
 
-export enum ImporterRoutes{
+export enum ImporterRoutes {
   IMPORT = 'admin/import'
 }
