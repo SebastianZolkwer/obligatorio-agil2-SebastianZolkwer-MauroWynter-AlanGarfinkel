@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { ChargingPointListComponent } from './chargingPoint-list.component';
 
 @NgModule({
+  declarations: [ChargingPointListComponent],
   imports: [
     CommonModule
-  ],
-  declarations: [ChargingPointListComponent]
+  ]
 })
 export class ChargingPointListModule { }

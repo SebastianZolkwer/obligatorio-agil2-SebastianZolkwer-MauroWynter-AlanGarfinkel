@@ -18,7 +18,7 @@ Given(/^I view the "([^"]*)"$/, function (url, callback) {
 });
 
 When(/^Selecciono el boton borrar del punto de carga "([^"]*)"$/, function (id, callback) {
-    element(by.id('delete'+ id)).click();
+    element(by.id('Delete'+ id)).click();
     callback();
 });
 
