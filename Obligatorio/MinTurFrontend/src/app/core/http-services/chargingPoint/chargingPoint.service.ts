@@ -35,7 +35,6 @@ export class ChargingPointService {
   }
 
   deleteChargingPoint(id: number, index: number) {
-    console.log(id)
     return this.http
       .delete
       ('chargingPoints/' + id)

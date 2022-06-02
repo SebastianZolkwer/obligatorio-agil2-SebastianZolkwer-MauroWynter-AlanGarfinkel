@@ -41,7 +41,7 @@ class="flex h-screen bg-gray-50 dark:bg-gray-900"
               <tr class="text-gray-700 dark:text-gray-400" *ngFor="let chargingPoint of chargingPoints; let i = index"
               >
                <td class="px-4 py-3 text-sm">
-                {{ chargingPoint.id }}
+                  {{ chargingPoint.id }}
                </td>
                 <td class="px-4 py-3 text-sm">
                   {{ chargingPoint.name }}
@@ -58,9 +58,9 @@ class="flex h-screen bg-gray-50 dark:bg-gray-900"
                 <td class="px-4 py-3">
                   <div class="flex items-center space-x-4 text-sm">
                     <button
+                      id="Delete{{i}}"
                       class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
-                      aria-label="Delete",
-                      id="delete"+ i,
+                      aria-label="Delete"
                       (click)="deleteChargingPoint(chargingPoint.id, i)"
                     >
                       <svg
@@ -126,7 +126,7 @@ class="flex h-screen bg-gray-50 dark:bg-gray-900"
                 </li>
                 <li>
                   <button
-                    class="px-3 py-1 text-white transition-colors duration-150 bg-purple-600 border border-r-0 border-purple-600 rounded-md focus:outline-none focus:shadow-outline-purple"
+                      class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple"
                   >
                     3
                   </button>
@@ -179,15 +179,15 @@ class="flex h-screen bg-gray-50 dark:bg-gray-900"
         </div>
       </div>
     </div>
+    <div *ngIf="justDeleted" class="flex flex-row justify-around mb-8 mt-8">
+      <div class="flex flex-col w-2/3 bg-gray-300 p-3 rounded-2xl border-2 border-purple">
+        <span class="h-3 w-3 flex">
+          <span class="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-pink-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-pink-400"></span>
+        </span>
+        <p class="text-indigo font-bold text-center mb-6" id="respuesta">Punto de carga eliminado</p>
+      </div>
+    </div>
   </main>
-</div>
-<div *ngIf="justDeleted" class="flex flex-row justify-around mb-8 mt-8">
-  <div class="flex flex-col w-2/3 bg-gray-300 p-3 rounded-2xl border-2 border-purple">
-    <span class="h-3 w-3 flex">
-      <span class="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-pink-400 opacity-75"></span>
-      <span class="relative inline-flex rounded-full h-3 w-3 bg-pink-400"></span>
-    </span>
-    <p class="text-indigo font-bold text-center mb-6" id="respuesta">Punto de carga eliminado</p>
-  </div>
 </div>
 </div>

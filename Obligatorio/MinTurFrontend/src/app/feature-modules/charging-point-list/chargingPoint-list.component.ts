@@ -43,6 +43,7 @@ export class ChargingPointListComponent implements OnInit {
 
 
   public deleteChargingPoint(chargingPointId: number, index: number): void {
+    console.log(index)
     this.chargingPointService.deleteChargingPoint(chargingPointId, index)
       .subscribe(() => {
         this.justDeleted = true;

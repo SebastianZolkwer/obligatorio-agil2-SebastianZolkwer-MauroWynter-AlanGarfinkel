@@ -60,7 +60,7 @@ const routes: Routes = [
   { path: ImporterRoutes.IMPORT, component: ImportingComponent, canActivate: [AuthGuard] },
   { path: ResortRoutes.RESORT_LIST, component: ResortListComponent, canActivate: [AuthGuard] },
   { path: ResortRoutes.RESORT_CREATE, component: ResortCreateComponent, canActivate: [AuthGuard] },
-  { path: ChargingPointRoutes.CHARGING_POINT_LIST, component: ChargingPointListComponent, canActivate: [AuthGuard] },
+  { path: ChargingPointRoutes.CHARGING_POINT_LIST, component: ChargingPointListComponent},
   { path: '**', redirectTo: RegionRoutes.REGIONS, pathMatch: 'full' }
 ];
 
