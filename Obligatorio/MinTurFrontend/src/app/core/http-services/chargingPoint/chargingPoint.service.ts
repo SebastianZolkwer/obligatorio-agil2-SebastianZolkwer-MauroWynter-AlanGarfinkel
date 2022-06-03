@@ -49,12 +49,14 @@ export class ChargingPointService {
 
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {
-      return throwError({ mensaje: "Server is shut down" });
+      const message = "Server is shut down";
+      return throwError({ mensaje: message });
     } else {
       if (error.status == 400 || error.status == 401 || error.status == 404) {
         return throwError(error.error);
       } else {
-        return throwError("Server with problems");
+        const message = "Server with problems";
+        return throwError(message);
       }
     }
   }
