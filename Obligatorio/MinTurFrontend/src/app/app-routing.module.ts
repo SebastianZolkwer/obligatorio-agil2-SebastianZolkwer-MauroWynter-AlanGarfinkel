@@ -36,9 +36,13 @@ import { ReservationReportComponent } from './feature-modules/reservation-report
 import { ReservationReportModule } from './feature-modules/reservation-report/reservation-report.module';
 import { ImportingComponent } from './feature-modules/importing/importing.component';
 import { ImportingModule } from './feature-modules/importing/importing.module';
+import { ChargingPointListComponent } from './feature-modules/charging-point-list/chargingPoint-list.component';
+import { ChargingPointCreateComponent } from './feature-modules/charging-point-create/charging-point-create.component';
+import { ChargingPointCreateModule } from './feature-modules/charging-point-create/charging-point-create.module';
 // tslint:disable-next-line:max-line-length
 import { AdminSpecificRoutes, ChargingPointRoutes, ImporterRoutes, RegionRoutes, ReservationRoutes, ResortRoutes, ReviewRoutes, SessionRoutes, TouristPointRoutes } from './core/routes';
-import { ChargingPointListComponent } from './feature-modules/charging-point-list/chargingPoint-list.component';
+
+
 
 const routes: Routes = [
   { path: '', redirectTo: RegionRoutes.REGIONS, pathMatch: 'full' },
@@ -60,7 +64,8 @@ const routes: Routes = [
   { path: ImporterRoutes.IMPORT, component: ImportingComponent, canActivate: [AuthGuard] },
   { path: ResortRoutes.RESORT_LIST, component: ResortListComponent, canActivate: [AuthGuard] },
   { path: ResortRoutes.RESORT_CREATE, component: ResortCreateComponent, canActivate: [AuthGuard] },
-  { path: ChargingPointRoutes.CHARGING_POINT_LIST, component: ChargingPointListComponent},
+  { path: ChargingPointRoutes.CHARGING_POINT_LIST, component: ChargingPointListComponent },
+  { path: ChargingPointRoutes.CHARGING_POINT_CREATE, component: ChargingPointCreateComponent },
   { path: '**', redirectTo: RegionRoutes.REGIONS, pathMatch: 'full' }
 ];
 
@@ -84,6 +89,7 @@ const routes: Routes = [
     ResortListModule,
     ResortCreateModule,
     ChargingPointListModule,
+    ChargingPointCreateModule,
     RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })

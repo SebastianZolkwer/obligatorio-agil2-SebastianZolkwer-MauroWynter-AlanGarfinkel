@@ -20,7 +20,7 @@ export enum ResortRoutes {
 
 export enum ChargingPointRoutes {
   CHARGING_POINT_LIST = 'admin/chargingPoint',
-  CHARGING_POINT_CREATE = 'admin/chargingPoint-create',
+  CHARGING_POINT_CREATE = 'admin/chargingPoint/create',
 }
 
 export enum ReviewRoutes {
