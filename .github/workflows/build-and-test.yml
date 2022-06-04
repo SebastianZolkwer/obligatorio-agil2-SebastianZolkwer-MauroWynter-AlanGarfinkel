@@ -43,3 +43,4 @@ jobs:
         with:
            token: ${{ secrets.YOUR_SECRET_TOKEN }}
            fail_ci_if_error: false
+           target: 55%
