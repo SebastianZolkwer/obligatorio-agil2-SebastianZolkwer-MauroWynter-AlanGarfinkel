@@ -1,4 +1,5 @@
 using MinTur.Domain.BusinessEntities;
+using System.Collections.Generic;
 
 namespace MinTur.BusinessLogicInterface.ResourceManagers
 {
@@ -6,5 +7,6 @@ namespace MinTur.BusinessLogicInterface.ResourceManagers
     {
         ChargingPoint Create(ChargingPoint chargingPoint);
         void DeleteChargingPointById(int chargingPointId);
+        List<ChargingPoint> GetAll();
     }
 }
