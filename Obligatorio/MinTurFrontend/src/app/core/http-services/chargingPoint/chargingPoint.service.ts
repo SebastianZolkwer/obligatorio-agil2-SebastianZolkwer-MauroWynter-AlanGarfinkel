@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Subject, throwError, } from 'rxjs';
+import { Observable, Subject, throwError, } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 
 import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
 import { format } from 'util';
 import { ChargingPointEndpoints } from '../endpoints';
 import { ChargingPointDetailsModel } from 'src/app/shared/models/out/chargingPoint-detail-model';
+import { ChargingPointIntentModel } from 'src/app/shared/models/in/charging-point-intent-model';
 
 @Injectable({
   providedIn: 'root'
@@ -45,6 +46,11 @@ export class ChargingPointService {
           this.chargingPointsChanged.next(this.chargingPoints.slice());
         }),
         catchError(this.handleError))
+  }
+
+  public createOneChargingPoint(chargingPointIntenModel: ChargingPointIntentModel): Observable<ChargingPointDetailsModel> {
+    return this.http.post<ChargingPointDetailsModel>
+      (ChargingPointEndpoints.CREATE_CHARGING_POINT, chargingPointIntenModel);
   }
 
   private handleError(error: HttpErrorResponse) {
