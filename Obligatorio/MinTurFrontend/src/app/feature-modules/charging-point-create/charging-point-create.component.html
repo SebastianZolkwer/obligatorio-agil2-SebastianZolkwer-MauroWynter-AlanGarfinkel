@@ -35,7 +35,7 @@
       </mat-form-field>
     </div>
     <div class="flex flex-row ml-2">
-      <p class="text-indigo font-semibold self-center">Idetificador:</p>
+      <p class="text-indigo font-semibold self-center">Identificador:</p>
       <mat-form-field class="ml-3 self-start w-2/5" >
         <mat-label>ej: 2222</mat-label>
         <input id="identificador" type="number" matInput (input)="setIdentifier($event.target.value)" min="0" max="9999">
@@ -45,8 +45,8 @@
       <p class="text-indigo font-semibold self-center">Region:</p>
       <mat-form-field class="ml-3 self-start w-2/5" >
         <mat-label>ej: Piriápolis...</mat-label>
-        <mat-select  (selectionChange)="selectRegion($event.value)" class="form-select mt-1 block w-full">
-          <mat-option id="region" [value]="region.id" *ngFor="let region of regions">{{region.name}}</mat-option>
+        <mat-select id="regiones" (selectionChange)="selectRegion($event.value)" class="form-select mt-1 block w-full">
+          <mat-option  [value]="region.id" *ngFor="let region of regions; let i = index" id="{{'region'+i}}">{{region.name}}</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
