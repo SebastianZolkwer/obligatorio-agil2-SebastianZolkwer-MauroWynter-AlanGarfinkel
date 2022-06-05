@@ -13,7 +13,6 @@ Vamos a utilizar gitFlow como modelo de ramas. Al momento de realizar una nueva 
 ## Contenido
 En la pestaña de issues se van a almacenar todos los  tareas, bugs, user stories, entre otros.
 Vamos a realizar una carpeta para cada entrega con los documentos pertinentes.
-Todos los informes de avance se encuentran con su version InformeDeAvance#numeroDeAvance
 Las evidencia de las standup meeting las podemos encontrar en los siguientes links:
 <ul> 
   <li> https://youtu.be/fI25JNjQHKc </li>
@@ -32,7 +31,8 @@ Se ubican dentro de la carpeta Entrega1
       <li> Documento: Retrospective.pdf</li>
       <li> Video: https://youtu.be/yGlIFIvtiRc</li>
     </ul>
-  </ul>
+  <li> Informe de avance: InformeDeAvance - Primer Entrega.pdf</li>
+</ul>
 
 ### Entrega 2
 #### Ubicacion de archivos
@@ -58,6 +58,28 @@ Se ubican dentro de la carpeta Entrega2
     </ul> 
   </li>
   <li> Informe de avance: Informe de avance - Segunda Entrega.pdf</li>
+</ul>
+
+### Entrega 3
+#### Ubicacion de archivos
+Se ubican dentro de la carpeta Entrega3
+<ul>
+  <li>Guia de desarrollo_mantenimiento del tablero.pdf : Guia de desarrollo_mantenimiento del tablero.pdf</li>
+  <li>Configuración_mantenimiento del pipeline y su vínculo con el tablero: Configuración_mantenimiento del pipeline y su vínculo con el tablero.pdf</li>
+  <li>Reporte de horas:
+    <ul> 
+      <li> El reporte de hora por miembro del equipo: Reporte Horas tercera entrega.pdf</li>
+      <li> Las estimaciones de las user stories las encontramos en la descripcion de la card considerando el tiempo de esuferzo real para el backend y sumando el tiempo estimado para el frontend ya que no se estimo la user story en su totalidad en un principio</li>
+    </ul>
+  </li>
+  <li>Reviews de la user stories: https://youtu.be/NiUJ_lcA7lE </li>
+  <li>Retrospective: 
+    <ul>
+      <li> Documento: Retroespective Tercera Entrega.pdf</li>
+      <li> Video:https://youtu.be/9heEr_abV0Y</li>
+    </ul> 
+  </li>
+  <li> Informe de avance: Informe de avance - Tercera Entrega.pdf</li>
 </ul>
   
 
