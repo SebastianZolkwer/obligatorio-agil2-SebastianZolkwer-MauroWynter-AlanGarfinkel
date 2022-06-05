@@ -66,6 +66,7 @@ Se ubican dentro de la carpeta Entrega3
 <ul>
   <li>Guia de desarrollo_mantenimiento del tablero.pdf : Guia de desarrollo_mantenimiento del tablero.pdf</li>
   <li>Configuración_mantenimiento del pipeline y su vínculo con el tablero: Configuración_mantenimiento del pipeline y su vínculo con el tablero.pdf</li>
+  <li> Test de integracion selenium: Test Integracion.side </li>
   <li>Reporte de horas:
     <ul> 
       <li> El reporte de hora por miembro del equipo: Reporte Horas tercera entrega.pdf</li>

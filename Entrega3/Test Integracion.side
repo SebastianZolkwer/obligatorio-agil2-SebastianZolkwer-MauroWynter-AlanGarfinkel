@@ -1,0 +1,971 @@
+{
+  "id": "7ab01064-399f-45fa-9841-b6ba0b18479c",
+  "version": "2.0",
+  "name": "Obligatorio Agil",
+  "url": "http://localhost:4200/admin",
+  "tests": [{
+    "id": "e716d509-7742-44a9-904d-e8972b49ac0a",
+    "name": "Create correct charging point",
+    "commands": [{
+      "id": "a1ccd95a-411c-4436-b3bd-b3890eded922",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:4200/admin/chargingPoint/create",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d8575e61-f078-4b11-93aa-146ce444489f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "044e067d-1631-4c76-9de4-3baaa27acf86",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "473cc0f3-ae15-499b-8492-b84ea10356ed",
+      "comment": "",
+      "command": "type",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Punto de carga1"
+    }, {
+      "id": "58fefb38-0670-4d31-9729-1f1f768ddab8",
+      "comment": "",
+      "command": "type",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//input[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "Muy bueno"
+    }, {
+      "id": "3724d77e-1391-4d8c-8754-5a0eacf99ddf",
+      "comment": "",
+      "command": "type",
+      "target": "id=direccion",
+      "targets": [
+        ["id=direccion", "id"],
+        ["css=#direccion", "css:finder"],
+        ["xpath=//input[@id='direccion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "Massini y libertad"
+    }, {
+      "id": "d484213c-0d85-4579-b748-d45d2bcba0ef",
+      "comment": "",
+      "command": "type",
+      "target": "id=identificador",
+      "targets": [
+        ["id=identificador", "id"],
+        ["css=#identificador", "css:finder"],
+        ["xpath=//input[@id='identificador']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "4568"
+    }, {
+      "id": "81771cd4-bd79-470b-b94a-7c882488cd58",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mat-select-placeholder",
+      "targets": [
+        ["css=.mat-select-placeholder", "css:finder"],
+        ["xpath=//div[@id='mat-select-value-1']/span", "xpath:idRelative"],
+        ["xpath=//mat-select/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "78962ad7-ef85-417f-8544-b2acf587ab95",
+      "comment": "",
+      "command": "click",
+      "target": "css=#region2 > .mat-option-text",
+      "targets": [
+        ["css=#region2 > .mat-option-text", "css:finder"],
+        ["xpath=//mat-option[@id='region2']/span", "xpath:idRelative"],
+        ["xpath=//mat-option[3]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Región Este')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "42d1bf51-e8c2-4c65-abd5-98af2f0ac6dc",
+      "comment": "",
+      "command": "click",
+      "target": "id=Crear",
+      "targets": [
+        ["id=Crear", "id"],
+        ["css=#Crear", "css:finder"],
+        ["xpath=//button[@id='Crear']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "db5832d3-e1af-48ab-9c10-ee1dda1efb5a",
+    "name": "Create incorect charging point",
+    "commands": [{
+      "id": "1d25dd29-0592-49a1-8f50-6e49f08010a8",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:4200/admin/chargingPoint/create",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74d05fc8-ca80-4123-bac2-4206b8c38f77",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "280e8909-30a3-4d63-aa1d-e7dcc16bd51d",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "db9c142c-58d0-4916-b59d-3701503e6448",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "58696884-8923-4436-a074-cf4ff0d4f9d0",
+      "comment": "",
+      "command": "type",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Punto de carga1 el mejor del uruguay"
+    }, {
+      "id": "d6fb2d81-3dc1-4f99-836e-14ebf020a58d",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//input[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "49b806a2-6c36-488c-b459-ebc4d9f721e5",
+      "comment": "",
+      "command": "type",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//input[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "Muy bueno"
+    }, {
+      "id": "e8f84ba7-1b57-4537-a92a-6bd367b7999d",
+      "comment": "",
+      "command": "click",
+      "target": "id=direccion",
+      "targets": [
+        ["id=direccion", "id"],
+        ["css=#direccion", "css:finder"],
+        ["xpath=//input[@id='direccion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5461a6a-92fb-4c96-9c76-5854852f7b7c",
+      "comment": "",
+      "command": "type",
+      "target": "id=direccion",
+      "targets": [
+        ["id=direccion", "id"],
+        ["css=#direccion", "css:finder"],
+        ["xpath=//input[@id='direccion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "Massini y libertad"
+    }, {
+      "id": "f2b1204b-821b-4d61-84d2-6db238ee6f4d",
+      "comment": "",
+      "command": "click",
+      "target": "id=identificador",
+      "targets": [
+        ["id=identificador", "id"],
+        ["css=#identificador", "css:finder"],
+        ["xpath=//input[@id='identificador']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "06858d27-2e5a-40e2-87cc-a6ba119cfcce",
+      "comment": "",
+      "command": "type",
+      "target": "id=identificador",
+      "targets": [
+        ["id=identificador", "id"],
+        ["css=#identificador", "css:finder"],
+        ["xpath=//input[@id='identificador']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "4578"
+    }, {
+      "id": "3cda89d4-4f0d-4d4f-8ac1-7b0d9d6f49ee",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c83-4 > .mat-form-field-infix",
+      "targets": [
+        ["css=.ng-tns-c83-4 > .mat-form-field-infix", "css:finder"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[5]/mat-form-field/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[5]/mat-form-field/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9913fda2-c860-4500-914d-340f4e8c5a5e",
+      "comment": "",
+      "command": "click",
+      "target": "css=#region1 > .mat-option-text",
+      "targets": [
+        ["css=#region1 > .mat-option-text", "css:finder"],
+        ["xpath=//mat-option[@id='region1']/span", "xpath:idRelative"],
+        ["xpath=//mat-option[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Región Centro Sur')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2317b45-14bc-4b72-84f6-1d2e2f9b8906",
+      "comment": "",
+      "command": "click",
+      "target": "id=Crear",
+      "targets": [
+        ["id=Crear", "id"],
+        ["css=#Crear", "css:finder"],
+        ["xpath=//button[@id='Crear']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "634fca62-c6ed-4e54-a34d-84da7732bce7",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b9dd88a5-b7e3-461c-8216-05f9252be373",
+      "comment": "",
+      "command": "type",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ab24a85-8293-41d5-9bc7-249e1b5d6290",
+      "comment": "",
+      "command": "click",
+      "target": "id=Crear",
+      "targets": [
+        ["id=Crear", "id"],
+        ["css=#Crear", "css:finder"],
+        ["xpath=//button[@id='Crear']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9752b38-354b-4483-9801-c05f29ef5c34",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b9c3f4d-f0bb-4a98-aace-76ae7af49ed9",
+      "comment": "",
+      "command": "type",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Punto de carga"
+    }, {
+      "id": "8e33b183-f28c-4aa9-8648-a55bd28580f6",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//input[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b23bb91-c197-465c-a857-738a118c7b30",
+      "comment": "",
+      "command": "type",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//input[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c056d3ad-2173-48ee-85f7-5937164a7bd4",
+      "comment": "",
+      "command": "click",
+      "target": "id=Crear",
+      "targets": [
+        ["id=Crear", "id"],
+        ["css=#Crear", "css:finder"],
+        ["xpath=//button[@id='Crear']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "be70ed45-d717-4eb7-9b54-282f7eb6a827",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//input[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5171d76b-d242-434e-adb2-293cf14d181a",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//input[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "933bc275-02b6-4dc0-80f0-b9347eceb111",
+      "comment": "",
+      "command": "type",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//input[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "Descripcion muy larga para el test mayor a 60 carracteres. En este punto de crga proporcionamos electricidad muy bararta y muy buena"
+    }, {
+      "id": "1ddc7647-0454-4aa1-9655-d3dd4354ef2e",
+      "comment": "",
+      "command": "click",
+      "target": "id=Crear",
+      "targets": [
+        ["id=Crear", "id"],
+        ["css=#Crear", "css:finder"],
+        ["xpath=//button[@id='Crear']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f85af78-61cf-4636-8330-5b173ff98a0a",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//input[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "43bec479-cff3-4658-9f22-f19da2dc4f27",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//input[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ef64bb6-d93a-4699-a014-ca13ccba54a0",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//input[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "35e665cd-c9fe-4323-bbe8-70bea511fbe0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-around:nth-child(3)",
+      "targets": [
+        ["css=.justify-around:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]", "xpath:idRelative"],
+        ["xpath=//app-resort-create/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab050e67-03a7-4585-8040-52e5d0a80ba9",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//input[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "938e22a3-58a2-4ce5-90d8-d334753d80ed",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//input[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "060020ec-4574-453a-b102-68daebead3e1",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//input[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "46298e6b-6d5c-4833-872e-06ae81cf4b30",
+      "comment": "",
+      "command": "type",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//input[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "Muy bararta buena"
+    }, {
+      "id": "52eb655c-7205-40c1-84eb-a5ba9ce4a57a",
+      "comment": "",
+      "command": "click",
+      "target": "id=direccion",
+      "targets": [
+        ["id=direccion", "id"],
+        ["css=#direccion", "css:finder"],
+        ["xpath=//input[@id='direccion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e890c1a2-d4bd-4da9-9806-72ce5ff877d9",
+      "comment": "",
+      "command": "type",
+      "target": "id=direccion",
+      "targets": [
+        ["id=direccion", "id"],
+        ["css=#direccion", "css:finder"],
+        ["xpath=//input[@id='direccion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "Massini y libertad en pocitos en Republica oriental del uruguay"
+    }, {
+      "id": "f53b442f-8914-4f42-97c2-87b130dabc80",
+      "comment": "",
+      "command": "click",
+      "target": "id=Crear",
+      "targets": [
+        ["id=Crear", "id"],
+        ["css=#Crear", "css:finder"],
+        ["xpath=//button[@id='Crear']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2713884b-4612-45a7-9f91-cae6817beac8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.flex:nth-child(5)",
+      "targets": [
+        ["css=.flex:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "381a59b7-0431-4c56-9857-1a7fc5a885a9",
+      "comment": "",
+      "command": "type",
+      "target": "id=direccion",
+      "targets": [
+        ["id=direccion", "id"],
+        ["css=#direccion", "css:finder"],
+        ["xpath=//input[@id='direccion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc4b68f0-6d0b-4118-9563-a8acdf7bf569",
+      "comment": "",
+      "command": "click",
+      "target": "id=Crear",
+      "targets": [
+        ["id=Crear", "id"],
+        ["css=#Crear", "css:finder"],
+        ["xpath=//button[@id='Crear']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "70e7fca0-d732-4502-a462-ae9edb6ce667",
+      "comment": "",
+      "command": "click",
+      "target": "id=direccion",
+      "targets": [
+        ["id=direccion", "id"],
+        ["css=#direccion", "css:finder"],
+        ["xpath=//input[@id='direccion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "917cd9a7-bda8-4526-88ec-a3b23cfb85d6",
+      "comment": "",
+      "command": "type",
+      "target": "id=direccion",
+      "targets": [
+        ["id=direccion", "id"],
+        ["css=#direccion", "css:finder"],
+        ["xpath=//input[@id='direccion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "Kibon"
+    }, {
+      "id": "b4e2274b-d565-4716-87d5-9abd33e3433e",
+      "comment": "",
+      "command": "click",
+      "target": "id=identificador",
+      "targets": [
+        ["id=identificador", "id"],
+        ["css=#identificador", "css:finder"],
+        ["xpath=//input[@id='identificador']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4afa666b-1e3c-4056-8c60-6e974be0ec0d",
+      "comment": "",
+      "command": "type",
+      "target": "id=identificador",
+      "targets": [
+        ["id=identificador", "id"],
+        ["css=#identificador", "css:finder"],
+        ["xpath=//input[@id='identificador']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "457"
+    }, {
+      "id": "e8daa11e-c999-4773-b77b-2f5c1c373129",
+      "comment": "",
+      "command": "click",
+      "target": "id=Crear",
+      "targets": [
+        ["id=Crear", "id"],
+        ["css=#Crear", "css:finder"],
+        ["xpath=//button[@id='Crear']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a5f1457-de4d-48d0-ba8d-f650e6b662fb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c83-3 > .mat-form-field-infix",
+      "targets": [
+        ["css=.ng-tns-c83-3 > .mat-form-field-infix", "css:finder"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[4]/mat-form-field/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "774dc09f-35b1-4680-be79-82b7348e82eb",
+      "comment": "",
+      "command": "type",
+      "target": "id=identificador",
+      "targets": [
+        ["id=identificador", "id"],
+        ["css=#identificador", "css:finder"],
+        ["xpath=//input[@id='identificador']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "4587"
+    }, {
+      "id": "a7a1077b-8a91-4a14-9dfa-63a77f865228",
+      "comment": "",
+      "command": "click",
+      "target": "id=Crear",
+      "targets": [
+        ["id=Crear", "id"],
+        ["css=#Crear", "css:finder"],
+        ["xpath=//button[@id='Crear']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "19372cf4-efd1-49e7-82f4-c9cf7c6f6291",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,161.77777099609375)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e14d5f40-6087-4832-bd1a-451d9f66633f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ml-2:nth-child(1)",
+      "targets": [
+        ["css=.ml-2:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div/button", "xpath:idRelative"],
+        ["xpath=//app-resort-create/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Volver')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ceb0e138-ee39-419d-936f-33a7132c30da",
+      "comment": "",
+      "command": "click",
+      "target": "css=.w-40",
+      "targets": [
+        ["css=.w-40", "css:finder"],
+        ["xpath=//div[@id='main-content']/div/app-chargingpoint-list/div/div/main/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//main/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear Nuevo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "46670f13-fe4e-4db9-b779-bf28d98d65a2",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9074abae-7c03-468c-ab70-cc81aabf4070",
+      "comment": "",
+      "command": "type",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Punto de carga"
+    }, {
+      "id": "2ca1b42b-060d-402e-a08f-0a64ac963f48",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//input[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "567e7006-98b7-4183-bcf8-af8c07cfc9a1",
+      "comment": "",
+      "command": "type",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//input[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "Muy bueno"
+    }, {
+      "id": "7ec7c923-b14c-4f2e-9af9-2ca0be55c7fc",
+      "comment": "",
+      "command": "click",
+      "target": "id=direccion",
+      "targets": [
+        ["id=direccion", "id"],
+        ["css=#direccion", "css:finder"],
+        ["xpath=//input[@id='direccion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d5ccd862-7e38-4f71-a8a9-cb0aec99aaae",
+      "comment": "",
+      "command": "type",
+      "target": "id=direccion",
+      "targets": [
+        ["id=direccion", "id"],
+        ["css=#direccion", "css:finder"],
+        ["xpath=//input[@id='direccion']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "Kibon"
+    }, {
+      "id": "a1dd2e4d-c4c2-48f7-9c36-850158434138",
+      "comment": "",
+      "command": "click",
+      "target": "id=identificador",
+      "targets": [
+        ["id=identificador", "id"],
+        ["css=#identificador", "css:finder"],
+        ["xpath=//input[@id='identificador']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9978a145-1032-4010-9e5f-bcb8665e01ff",
+      "comment": "",
+      "command": "type",
+      "target": "id=identificador",
+      "targets": [
+        ["id=identificador", "id"],
+        ["css=#identificador", "css:finder"],
+        ["xpath=//input[@id='identificador']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "4789"
+    }, {
+      "id": "476e9380-9545-4198-8e0e-4e3752b16dce",
+      "comment": "",
+      "command": "click",
+      "target": "id=Crear",
+      "targets": [
+        ["id=Crear", "id"],
+        ["css=#Crear", "css:finder"],
+        ["xpath=//button[@id='Crear']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "acb460be-35ec-46bf-ae90-b8e2da08eb9c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=Crear",
+      "targets": [
+        ["id=Crear", "id"],
+        ["css=#Crear", "css:finder"],
+        ["xpath=//button[@id='Crear']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c948437-14b0-44bc-a751-3e01c6712600",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=Crear",
+      "targets": [
+        ["id=Crear", "id"],
+        ["css=#Crear", "css:finder"],
+        ["xpath=//button[@id='Crear']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-resort-create/div[2]/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "b4126de5-6c24-4ee3-bc64-0a93c26b44ec",
+    "name": "Delete a charging point",
+    "commands": [{
+      "id": "aaef296e-b205-4cc9-8417-ee4794343d7e",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:4200/explore/regions",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a663982c-1be8-4d63-8abd-652631481f04",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fed43758-1479-4e6a-b462-76203fc8f104",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Puntos de Carga",
+      "targets": [
+        ["linkText=Puntos de Carga", "linkText"],
+        ["css=.my-2:nth-child(6) > .block", "css:finder"],
+        ["xpath=//div[@id='sidebar']/ul/div/li[6]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/admin/chargingPoint')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Puntos de Carga')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "874262dd-726b-4d75-8943-c371f00ee5a2",
+      "comment": "",
+      "command": "click",
+      "target": "css=#Delete0 > .w-5",
+      "targets": [
+        ["css=#Delete0 > .w-5", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e98cc014-c78c-44d3-bbe8-4cd655462243",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:4200/", "http://localhost:4200/admin/chargingPoint", "http://localhost:4200/admin/chargingPoint/create", "http://localhost:4200/admin"],
+  "plugins": []
+}
