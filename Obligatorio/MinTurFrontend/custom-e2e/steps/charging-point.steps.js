@@ -11,13 +11,13 @@ chai.use(chaiAsPromised);
 const expect = chai.expect;
 
 Given(/^I view the "([^"]*)"$/, function (url) {
-    browser.get(url).then(function () {
-        browser.sleep(5000);
-    });
+  browser.get(url).then(function () {
+      browser.sleep(5000);
+  });
 });
 
-Given('Ingreso el valor {string} en el campo {string}',
-    function (inputTextEntry, inputName) {
+When('Ingreso el valor {string} en el campo {string}',
+  function (inputTextEntry, inputName) {
     browser.sleep(1000);
     browser.driver
         .findElement(by.id(inputName))
@@ -25,12 +25,10 @@ Given('Ingreso el valor {string} en el campo {string}',
     return browser.driver
         .findElement(by.id(inputName))
         .sendKeys(inputTextEntry);
-}
+  }
 );
 
-
-
-Given('Selecciono el valor {string} como región', function (text) {
+When('Selecciono el valor {string} como región', function (text) {
   browser.sleep(1000)
   element(by.tagName('mat-select')).click();
 
@@ -47,9 +45,7 @@ When('Registro el punto de carga', function (callback) {
   browser.sleep(3000);
   element(by.id('Crear')).click();
   callback();
-  browser.driver.sleep(3000)
 });
-
 
 Then('Veo el mensaje {string}', async function (mensaje) {
   browser.sleep(3000);
